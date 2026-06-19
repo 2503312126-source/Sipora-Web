@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIPORA — Sistem Informasi Pengelolaan Orangutan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="penanganan.css">
+</head>
+<body>
+
+  <!-- ===== LOGIN PAGE ===== -->
+  <div id="loginPage" class="login-wrapper">
+    <div class="login-left">
+      <div class="login-left-bg"></div>
+      <div class="login-left-content">
+        <div class="login-brand">
+          <div class="brand-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="19" stroke="#10B981" stroke-width="2"/>
+              <path d="M14 22c0-4 12-4 12 0" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="16" cy="17" r="2" fill="#10B981"/>
+              <circle cx="24" cy="17" r="2" fill="#10B981"/>
+              <path d="M20 14v2M28 20s2-2 4-1M12 20s-2-2-4-1" stroke="#10B981" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h1>SIPORA</h1>
+          <p class="brand-tagline">Sistem Informasi Pengelolaan Orangutan</p>
+          <p class="brand-desc">Platform konservasi cerdas untuk melacak, merehabilitasi, dan melindungi orangutan yang terancam punah di seluruh Kalimantan & Sumatera.</p>
+        </div>
+        <div class="login-stats">
+          <div class="login-stat-item">
+            <span class="login-stat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 2.5-1.2 4.7-3 6.3V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-1.7C6.2 13.7 5 11.5 5 9a7 7 0 0 1 7-7z"/><path d="M9 22h6"/><path d="M12 17v5"/></svg>
+            </span>
+            <span class="login-stat-text"><strong>1.500+</strong> Orangutan Dipantau</span>
+          </div>
+          <div class="login-stat-item">
+            <span class="login-stat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <span class="login-stat-text"><strong>45</strong> Lokasi Konservasi</span>
+          </div>
+          <div class="login-stat-item">
+            <span class="login-stat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </span>
+            <span class="login-stat-text"><strong>300+</strong> Program Rehabilitasi</span>
+          </div>
+        </div>
+        <div class="login-version">v3.0 Premium &mdash; Conservation Intelligence Platform</div>
+      </div>
+    </div>
+    <div class="login-right">
+      <div class="login-card-glass">
+        <div class="login-card-header">
+          <div class="login-card-logo">
+            <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="19" stroke="#10B981" stroke-width="2"/>
+              <path d="M14 22c0-4 12-4 12 0" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="16" cy="17" r="2" fill="#10B981"/>
+              <circle cx="24" cy="17" r="2" fill="#10B981"/>
+              <path d="M20 14v2M28 20s2-2 4-1M12 20s-2-2-4-1" stroke="#10B981" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h2>Welcome Back</h2>
+          <p class="login-sub">Sign in to your SIPORA account</p>
+        </div>
+        <div class="form-group">
+          <label>Username</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </span>
+            <input type="text" id="loginUser" placeholder="Enter username" autocomplete="username" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            <input type="password" id="loginPass" placeholder="Enter your password" autocomplete="current-password" />
+          </div>
+        </div>
+        <div class="remember-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="rememberMe" checked>
+            <span class="checkbox-custom"></span>
+            Remember me
+          </label>
+        </div>
+        <button class="btn-signin" onclick="doLogin()">
+          <span>Sign In</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </button>
+        <p class="default-cred">Default credentials &middot; <strong>admin</strong> / <strong>admin123</strong></p>
+        <p id="loginError" class="login-error" style="display:none">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Username atau password salah!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN APP ===== -->
+  <div id="mainApp" class="app-wrapper" style="display:none">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="sidebar-brand-icon">
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="19" stroke="#10B981" stroke-width="2.5"/>
+            <path d="M14 22c0-4 12-4 12 0" stroke="#10B981" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="16" cy="17" r="2.5" fill="#10B981"/>
+            <circle cx="24" cy="17" r="2.5" fill="#10B981"/>
+            <path d="M20 13v3M29 20s2-2 4-1M11 20s-2-2-4-1" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="sidebar-brand-text">
+          <div class="sidebar-title">SIPORA</div>
+          <div class="sidebar-sub">Conservation Platform</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-label">Main Menu</div>
+        <a href="#" class="nav-item active" data-page="dashboard" onclick="showPage('dashboard',this)">
+          <span class="nav-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </span>
+          <span>Dashboard</span>
+        </a>
+        <a href="#" class="nav-item" data-page="informasi" onclick="showPage('informasi',this)">
+          <span class="nav-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 2.5-1.2 4.7-3 6.3V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-1.7C6.2 13.7 5 11.5 5 9a7 7 0 0 1 7-7z"/><path d="M9 22h6"/><path d="M12 17v5"/></svg>
+          </span>
+          <span>Informasi</span>
+        </a>
+        <a href="#" class="nav-item" data-page="laporan" onclick="showPage('laporan',this)">
+          <span class="nav-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </span>
+          <span>Laporan</span>
+        </a>
+        <a href="#" class="nav-item" data-page="rehabilitasi" onclick="showPage('rehabilitasi',this)">
+          <span class="nav-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </span>
+          <span>Rehabilitasi</span>
+        </a>
+        <div class="nav-label">System</div>
+        <a href="#" class="nav-item" id="navAdmin" data-page="admin" onclick="showPage('admin',this)">
+          <span class="nav-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </span>
+          <span>Admin</span>
+        </a>
+        <a href="#" class="nav-item" id="navPenanganan" data-page="penanganan" onclick="showPage('penanganan',this)">
+          <span class="nav-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
+          </span>
+          <span>Penanganan</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-footer-item">
+          <span class="sidebar-footer-dot"></span>
+          <span class="sidebar-footer-text">System Online</span>
+        </div>
+        <div class="sidebar-footer-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="sidebar-footer-text"><span id="activeUserCount">4</span> Active Users</span>
+        </div>
+        <div class="sidebar-footer-item version">v3.0.1</div>
+      </div>
+
+      <div class="sidebar-user">
+        <div class="user-avatar" id="userAvatar">A</div>
+        <div class="user-info">
+          <div class="user-name" id="userDisplayName">Administrator</div>
+          <div class="user-role" id="userDisplayRole">Admin</div>
+        </div>
+        <button class="sidebar-logout" onclick="doLogout()" title="Logout">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- TOPBAR -->
+      <div class="topbar">
+        <div class="topbar-left">
+          <button class="topbar-menu-toggle" id="menuToggle" onclick="toggleSidebar()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <div id="pageTitle">
+            <h2>Dashboard</h2>
+            <p>Conservation overview & system stats</p>
+          </div>
+        </div>
+        <div class="topbar-center">
+          <div class="topbar-search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="globalSearch" placeholder="Search anything..." oninput="handleGlobalSearch(this.value)" />
+            <span class="topbar-search-hint">Ctrl+K</span>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <div class="topbar-date" id="currentDate"></div>
+          <button class="topbar-icon-btn" onclick="toggleTheme()" title="Toggle Theme">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="themeIcon"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+          <button class="topbar-icon-btn" id="notifBtn" onclick="toggleNotifications()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <span class="notif-badge" id="notifBadge" style="display:none">0</span>
+          </button>
+          <div class="topbar-profile" onclick="toggleProfileDropdown()">
+            <div class="topbar-avatar" id="topbarAvatar">A</div>
+            <div class="topbar-profile-info">
+              <span class="topbar-profile-name" id="topbarProfileName">Administrator</span>
+              <span class="topbar-profile-role" id="topbarProfileRole">Admin</span>
+            </div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            <div class="profile-dropdown" id="profileDropdown">
+              <div class="profile-dropdown-header">
+                <div class="profile-dropdown-avatar" id="dropdownAvatar">A</div>
+                <div>
+                  <div class="profile-dropdown-name" id="dropdownName">Administrator</div>
+                  <div class="profile-dropdown-role" id="dropdownRole">Admin</div>
+                </div>
+              </div>
+              <div class="profile-dropdown-divider"></div>
+              <a href="#" class="profile-dropdown-item" id="profileDropdownSettings" onclick="showPage('admin',null)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                Settings
+              </a>
+              <div class="profile-dropdown-divider"></div>
+              <a href="#" class="profile-dropdown-item logout" onclick="doLogout()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                Sign Out
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== DASHBOARD PAGE ===== -->
+      <div id="page-dashboard" class="page active">
+
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+          <div class="hero-bg"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="hero-badge">Conservation Platform v3.0</div>
+            <h1 class="hero-title">SIPORA &mdash; Sistem Informasi Pengelolaan Orangutan</h1>
+            <p class="hero-subtitle">Platform monitoring, rehabilitasi, dan konservasi orangutan terintegrasi untuk melindungi spesies terancam punah di Indonesia.</p>
+            <div class="hero-actions">
+              <button class="hero-btn hero-btn-primary" onclick="showPage('informasi',document.querySelector('[data-page=informasi]'))">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                Lihat Data
+              </button>
+              <button class="hero-btn hero-btn-secondary" id="heroBtnLaporan" onclick="showPage('laporan',document.querySelector('[data-page=laporan]'))">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Buat Laporan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stat Cards -->
+        <div class="stat-grid">
+          <div class="stat-card stat-card-green">
+            <div class="stat-card-top">
+              <div class="stat-label">Total Orangutan</div>
+              <div class="stat-icon-wrap green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 2.5-1.2 4.7-3 6.3V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-1.7C6.2 13.7 5 11.5 5 9a7 7 0 0 1 7-7z"/><path d="M9 22h6"/><path d="M12 17v5"/></svg>
+              </div>
+            </div>
+            <div class="stat-value" id="statTotal">0</div>
+            <div class="stat-footer">
+              <span class="stat-growth positive" id="statTotalGrowth">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 5 19 19 5 19"/></svg>
+                +0%
+              </span>
+              <span class="stat-label-small">dari total data</span>
+            </div>
+          </div>
+          <div class="stat-card stat-card-yellow">
+            <div class="stat-card-top">
+              <div class="stat-label">Rehabilitasi Aktif</div>
+              <div class="stat-icon-wrap yellow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+            </div>
+            <div class="stat-value" id="statRehab">0</div>
+            <div class="stat-footer">
+              <span class="stat-growth positive" id="statRehabGrowth">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 5 19 19 5 19"/></svg>
+                +0%
+              </span>
+              <span class="stat-label-small">sedang berlangsung</span>
+            </div>
+          </div>
+          <div class="stat-card stat-card-blue">
+            <div class="stat-card-top">
+              <div class="stat-label">Laporan Masuk</div>
+              <div class="stat-icon-wrap blue">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+            </div>
+            <div class="stat-value" id="statLaporan">0</div>
+            <div class="stat-footer">
+              <span class="stat-growth" id="statLaporanGrowth">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 5 19 19 5 19"/></svg>
+                0
+              </span>
+              <span class="stat-label-small">total laporan</span>
+            </div>
+          </div>
+          <div class="stat-card stat-card-purple">
+            <div class="stat-card-top">
+              <div class="stat-label">Pengguna Sistem</div>
+              <div class="stat-icon-wrap purple">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+            </div>
+            <div class="stat-value" id="statUser">4</div>
+            <div class="stat-footer">
+              <span class="stat-growth positive">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 5 19 19 5 19"/></svg>
+                Active
+              </span>
+              <span class="stat-label-small">pengguna terdaftar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-grid">
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div>
+                <div class="chart-card-title">Populasi Orangutan</div>
+                <div class="chart-card-subtitle">Perubahan populasi per bulan</div>
+              </div>
+              <div class="chart-card-actions">
+                <span class="chart-badge">Tahunan</span>
+              </div>
+            </div>
+            <div class="chart-body">
+              <canvas id="populationChart"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div>
+                <div class="chart-card-title">Rehabilitasi Bulanan</div>
+                <div class="chart-card-subtitle">Jumlah program rehabilitasi per bulan</div>
+              </div>
+            </div>
+            <div class="chart-body">
+              <canvas id="rehabChart"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div>
+                <div class="chart-card-title">Status Konservasi</div>
+                <div class="chart-card-subtitle">Distribusi status konservasi</div>
+              </div>
+            </div>
+            <div class="chart-body">
+              <canvas id="conservationChart"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div>
+                <div class="chart-card-title">Status Breakdown</div>
+                <div class="chart-card-subtitle">CR &mdash; EN &mdash; VU</div>
+              </div>
+            </div>
+            <div class="chart-body">
+              <canvas id="pieChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="dash-bottom">
+          <div class="dash-panel">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">Recent Rehabilitation Activity</div>
+                <div class="panel-sub">Latest 6 program entries</div>
+              </div>
+              <a href="#" onclick="showPage('rehabilitasi',document.querySelector('[data-page=rehabilitasi]'))" class="link-viewall">
+                View all
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+            <div id="recentRehab" class="empty-state">No rehabilitation entries yet</div>
+          </div>
+          <div class="dash-panel">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">Activity Timeline</div>
+                <div class="panel-sub">Aktivitas terkini sistem</div>
+              </div>
+            </div>
+            <div class="timeline" id="activityTimeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <div class="timeline-text">Sistem siap digunakan</div>
+                  <div class="timeline-time">Sekarang</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== INFORMASI PAGE ===== -->
+      <div id="page-informasi" class="page">
+        <!-- Quick Stats -->
+        <div class="quick-stats">
+          <div class="quick-stat-card">
+            <div class="quick-stat-value" id="qsTotal">0</div>
+            <div class="quick-stat-label">Total Orangutan</div>
+          </div>
+          <div class="quick-stat-card danger">
+            <div class="quick-stat-value" id="qsCR">0</div>
+            <div class="quick-stat-label">Kritis (CR)</div>
+          </div>
+          <div class="quick-stat-card warning">
+            <div class="quick-stat-value" id="qsEN">0</div>
+            <div class="quick-stat-label">Terancam (EN)</div>
+          </div>
+          <div class="quick-stat-card info">
+            <div class="quick-stat-value" id="qsVU">0</div>
+            <div class="quick-stat-label">Rentan (VU)</div>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div class="search-wrap">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="searchInfo" placeholder="Cari nama, habitat, atau lokasi..." oninput="filterInformasi()" />
+          </div>
+          <div class="toolbar-right" id="toolbarInfoActions">
+            <button class="btn-secondary" onclick="filterInformasi()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Cari
+            </button>
+            <button class="btn-icon-sm" onclick="renderInformasiTable()" title="Refresh">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            </button>
+            <button class="btn-secondary" id="btnInfoEdit" onclick="editInfoSelected()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              Edit
+            </button>
+            <button class="btn-danger" id="btnInfoHapus" onclick="hapusInfoSelected()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              Hapus
+            </button>
+            <button class="btn-primary" id="btnInfoTambah" onclick="openModalInfo()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Tambah Data
+            </button>
+          </div>
+        </div>
+
+        <!-- Cards View -->
+        <div id="infoCardsContainer" class="info-cards-grid"></div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th id="thCheckAllInfo"><input type="checkbox" id="checkAllInfo" onchange="toggleCheckAll('info')"></th>
+                <th>Orangutan</th>
+                <th>Jenis Kelamin</th>
+                <th>Usia (Th)</th>
+                <th>Berat (Kg)</th>
+                <th>Habitat</th>
+                <th>Status</th>
+                <th>Lokasi</th>
+                <th>Tgl Masuk</th>
+              </tr>
+            </thead>
+            <tbody id="infoTableBody"></tbody>
+          </table>
+          <div id="infoEmpty" class="empty-state">
+            <div class="empty-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 2.5-1.2 4.7-3 6.3V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-1.7C6.2 13.7 5 11.5 5 9a7 7 0 0 1 7-7z"/><path d="M9 22h6"/><path d="M12 17v5"/></svg>
+            </div>
+            <p>Belum ada data orangutan</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== LAPORAN PAGE ===== -->
+      <div id="page-laporan" class="page">
+        <!-- Stats -->
+        <div class="quick-stats">
+          <div class="quick-stat-card">
+            <div class="quick-stat-value" id="qsLaporanTotal">0</div>
+            <div class="quick-stat-label">Total Laporan</div>
+          </div>
+          <div class="quick-stat-card warning">
+            <div class="quick-stat-value" id="qsLaporanMenunggu">0</div>
+            <div class="quick-stat-label">Menunggu</div>
+          </div>
+          <div class="quick-stat-card info">
+            <div class="quick-stat-value" id="qsLaporanDiproses">0</div>
+            <div class="quick-stat-label">Diproses</div>
+          </div>
+          <div class="quick-stat-card success">
+            <div class="quick-stat-value" id="qsLaporanSelesai">0</div>
+            <div class="quick-stat-label">Selesai</div>
+          </div>
+        </div>
+
+        <div class="laporan-layout">
+          <div class="laporan-form-panel" id="laporanFormPanel">
+            <div class="panel-title-block">
+              <h3>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Laporkan Temuan
+              </h3>
+              <p>Setiap laporan <span class="highlight">ditindaklanjuti</span> oleh tim pusat rehabilitasi</p>
+            </div>
+
+            <!-- Upload Photo -->
+            <div class="upload-photo-area" id="uploadArea" onclick="document.getElementById('photoInput').click()">
+              <input type="file" id="photoInput" accept="image/*" style="display:none" onchange="previewPhoto(event)">
+              <div class="upload-placeholder" id="uploadPlaceholder">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Upload Foto Temuan</span>
+                <span class="upload-hint">Klik untuk memilih gambar</span>
+              </div>
+              <div class="upload-preview" id="uploadPreview" style="display:none">
+                <img id="previewImage" alt="Preview">
+                <button class="upload-remove" onclick="removePhoto(event)">✕</button>
+              </div>
+            </div>
+
+            <div class="section-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Data Pelapor
+            </div>
+            <div class="form-group">
+              <label>Nama Lengkap <span class="required">*</span></label>
+              <div class="input-wrap">
+                <span class="input-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </span>
+                <input type="text" id="lNama" placeholder="Nama lengkap" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>No. HP / WA <span class="required">*</span></label>
+              <div class="input-wrap">
+                <span class="input-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </span>
+                <input type="text" id="lHP" placeholder="08xxxxxxxxxx" />
+              </div>
+            </div>
+
+            <div class="section-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Data Temuan
+            </div>
+            <div class="form-group">
+              <label>Tanggal &amp; Jam <span class="required">*</span></label>
+              <div class="input-wrap">
+                <span class="input-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </span>
+                <input type="datetime-local" id="lTanggal" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Lokasi Temuan <span class="required">*</span></label>
+              <div class="input-wrap">
+                <span class="input-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <input type="text" id="lLokasi" placeholder="Desa / Kecamatan / Kabupaten" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Jenis Orang Utan</label>
+                <select id="lJenis" class="form-select">
+                  <option value="">-- Pilih Jenis --</option>
+                  <option>Pongo pygmaeus (Borneo)</option>
+                  <option>Pongo abelii (Sumatera)</option>
+                  <option>Pongo tapanuliensis (Tapanuli)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Kondisi</label>
+                <select id="lKondisi" class="form-select">
+                  <option value="">-- Pilih Kondisi --</option>
+                  <option>Sehat</option>
+                  <option>Terluka</option>
+                  <option>Sakit</option>
+                  <option>Mati</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Keterangan Tambahan</label>
+              <div class="input-wrap">
+                <span class="input-icon" style="top:14px;transform:none">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </span>
+                <textarea id="lKet" class="form-textarea" placeholder="Deskripsikan kondisi & situasi temuan..."></textarea>
+              </div>
+            </div>
+            <div class="form-buttons">
+              <button class="btn-secondary" onclick="resetLaporan()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                Reset
+              </button>
+              <button class="btn-primary" onclick="kirimLaporan()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Kirim Laporan
+              </button>
+            </div>
+            <div class="hotline-bar">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Hotline 24 Jam &middot; 0831-5715-0407
+            </div>
+          </div>
+
+          <div class="laporan-list-panel">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">Riwayat Laporan</div>
+                <div class="panel-sub">Daftar laporan masuk terbaru</div>
+              </div>
+              <div class="panel-actions">
+                <button class="btn-icon-sm" id="btnLapDetail" onclick="detailLaporanSelected()">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Detail
+                </button>
+                <button class="btn-icon-sm" onclick="renderLaporanList()">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Status Timeline -->
+            <div class="status-step-bar">
+              <div class="step-item active">
+                <div class="step-circle">1</div>
+                <div class="step-label">Menunggu</div>
+              </div>
+              <div class="step-line"></div>
+              <div class="step-item">
+                <div class="step-circle">2</div>
+                <div class="step-label">Diproses</div>
+              </div>
+              <div class="step-line"></div>
+              <div class="step-item">
+                <div class="step-circle">3</div>
+                <div class="step-label">Selesai</div>
+              </div>
+            </div>
+
+            <!-- Map Placeholder -->
+            <div class="map-placeholder">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Peta Lokasi &mdash; Kalimantan &amp; Sumatera</span>
+            </div>
+
+            <table class="data-table compact">
+              <thead>
+                <tr>
+                  <th id="thCheckAllLap"><input type="checkbox" id="checkAllLap" onchange="toggleCheckAll('lap')"></th>
+                  <th>Pelapor</th>
+                  <th>Lokasi</th>
+                  <th>Tanggal</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="laporanTableBody"></tbody>
+            </table>
+            <div id="laporanEmpty" class="empty-state">
+              <div class="empty-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <p>Belum ada laporan masuk</p>
+            </div>
+            <div class="legend-row">
+              <span class="dot yellow"></span> Menunggu
+              <span class="dot blue"></span> Diproses
+              <span class="dot green"></span> Selesai
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== REHABILITASI PAGE ===== -->
+      <div id="page-rehabilitasi" class="page">
+        <div class="toolbar">
+          <div class="search-wrap">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="searchRehab" placeholder="Cari nama, program, atau petugas..." oninput="filterRehabilitasi()" />
+          </div>
+          <div class="toolbar-right" id="toolbarRehabActions">
+            <button class="btn-secondary" onclick="filterRehabilitasi()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Cari
+            </button>
+            <button class="btn-icon-sm" onclick="renderRehabTable()" title="Refresh">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            </button>
+            <button class="btn-secondary" id="btnRehabEdit" onclick="editRehabSelected()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              Edit
+            </button>
+            <button class="btn-danger" id="btnRehabHapus" onclick="hapusRehabSelected()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              Hapus
+            </button>
+            <button class="btn-primary" id="btnRehabTambah" onclick="openModalRehab()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Tambah Rehabilitasi
+            </button>
+          </div>
+        </div>
+
+        <!-- Program Cards -->
+        <div id="rehabCards" class="rehab-cards-grid"></div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th id="thCheckAllRehab"><input type="checkbox" id="checkAllRehab" onchange="toggleCheckAll('rehab')"></th>
+                <th>Nama</th>
+                <th>Tanggal</th>
+                <th>Program</th>
+                <th>Progress</th>
+                <th>Status</th>
+                <th>Petugas</th>
+              </tr>
+            </thead>
+            <tbody id="rehabTableBody"></tbody>
+          </table>
+          <div id="rehabEmpty" class="empty-state">
+            <div class="empty-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <p>Belum ada data rehabilitasi</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== ADMIN PAGE ===== -->
+      <div id="page-admin" class="page">
+        <div class="quick-stats">
+          <div class="quick-stat-card">
+            <div class="quick-stat-value" id="qsAdminTotal">0</div>
+            <div class="quick-stat-label">Total Pengguna</div>
+          </div>
+          <div class="quick-stat-card success">
+            <div class="quick-stat-value" id="qsAdminAktif">0</div>
+            <div class="quick-stat-label">Aktif</div>
+          </div>
+          <div class="quick-stat-card warning">
+            <div class="quick-stat-value" id="qsAdminPetugas">0</div>
+            <div class="quick-stat-label">Petugas</div>
+          </div>
+          <div class="quick-stat-card info">
+            <div class="quick-stat-value" id="qsAdminViewer">0</div>
+            <div class="quick-stat-label">Viewer</div>
+          </div>
+        </div>
+
+        <div class="toolbar" id="toolbarAdminActions">
+          <button class="btn-primary" onclick="openModalUser()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Tambah Pengguna
+          </button>
+        </div>
+
+        <!-- User Cards -->
+        <div id="userCards" class="user-cards-grid"></div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th id="thUserNo">#</th>
+                <th>Pengguna</th>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Last Login</th>
+                <th>Status</th>
+                <th id="thUserAksi">Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="userTableBody"></tbody>
+          </table>
+        </div>
+
+        <!-- LAPORAN MANAGEMENT -->
+        <div style="margin-top:28px" id="adminLaporanManagement">
+          <div class="panel-header" style="margin-bottom:16px">
+            <div>
+              <div class="panel-title" style="font-size:17px">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:8px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                Manajemen Laporan
+              </div>
+              <div class="panel-sub">Kelola dan proses laporan yang masuk</div>
+            </div>
+          </div>
+
+          <div class="quick-stats" style="margin-bottom:16px">
+            <div class="quick-stat-card">
+              <div class="quick-stat-value" id="qsAdminLapTotal">0</div>
+              <div class="quick-stat-label">Total Laporan</div>
+            </div>
+            <div class="quick-stat-card warning">
+              <div class="quick-stat-value" id="qsAdminLapMenunggu">0</div>
+              <div class="quick-stat-label">Menunggu</div>
+            </div>
+            <div class="quick-stat-card info">
+              <div class="quick-stat-value" id="qsAdminLapDiproses">0</div>
+              <div class="quick-stat-label">Diproses</div>
+            </div>
+            <div class="quick-stat-card success">
+              <div class="quick-stat-value" id="qsAdminLapSelesai">0</div>
+              <div class="quick-stat-label">Selesai</div>
+            </div>
+          </div>
+
+          <div class="toolbar">
+            <div class="search-wrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="searchLaporanAdmin" placeholder="Cari pelapor, lokasi..." oninput="renderLaporanTableAdmin()" />
+            </div>
+            <div class="toolbar-right">
+              <button class="btn-secondary" onclick="prosesLaporanBatch('Diproses')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                Proses Terpilih
+              </button>
+              <button class="btn-primary" onclick="selesaikanLaporanBatch()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Selesaikan Terpilih
+              </button>
+              <button class="btn-icon-sm" onclick="renderLaporanTableAdmin()" title="Refresh">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th><input type="checkbox" id="checkAllLapAdmin" onchange="toggleCheckAllLapAdmin(this.checked)"></th>
+                  <th>Pelapor</th>
+                  <th>HP</th>
+                  <th>Lokasi</th>
+                  <th>Tanggal</th>
+                  <th>Kondisi</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="laporanAdminTableBody"></tbody>
+            </table>
+            <div id="laporanAdminEmpty" class="empty-state" style="display:none">
+              <div class="empty-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+              <p>Belum ada laporan</p>
+            </div>
+          </div>
+
+          <div class="legend-row" style="margin-top:12px">
+            <span class="dot yellow"></span> Menunggu
+            <span class="dot blue"></span> Diproses
+            <span class="dot green"></span> Selesai
+            <span style="margin-left:auto;font-size:12px;color:var(--text-dim)">Klik status untuk mengubah</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== PENANGANAN LAPORAN PAGE ===== -->
+      <div id="page-penanganan" class="page">
+        <!-- Stats Mini -->
+        <div class="pn-bar">
+          <div class="pn-bar-item"><span class="pn-bar-num" id="pnTotal">0</span><span class="pn-bar-lbl">Total</span></div>
+          <div class="pn-bar-item waiting"><span class="pn-bar-num" id="pnMenunggu">0</span><span class="pn-bar-lbl">Menunggu</span></div>
+          <div class="pn-bar-item processing"><span class="pn-bar-num" id="pnDiproses">0</span><span class="pn-bar-lbl">Diproses</span></div>
+          <div class="pn-bar-item investigasi"><span class="pn-bar-num" id="pnInvestigasi">0</span><span class="pn-bar-lbl">Investigasi</span></div>
+          <div class="pn-bar-item rehab"><span class="pn-bar-num" id="pnRehab">0</span><span class="pn-bar-lbl">Rehabilitasi</span></div>
+          <div class="pn-bar-item done"><span class="pn-bar-num" id="pnSelesai">0</span><span class="pn-bar-lbl">Selesai</span></div>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="pn-toolbar">
+          <div class="pn-toolbar-search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="pnSearch" placeholder="Cari laporan..." oninput="renderPenangananPage()" />
+          </div>
+          <div class="pn-toolbar-filters">
+            <select id="pnFilterPrioritas" class="pn-fselect" onchange="renderPenangananPage()">
+              <option value="">Semua Prioritas</option>
+              <option>Rendah</option>
+              <option>Sedang</option>
+              <option>Tinggi</option>
+              <option>Darurat</option>
+            </select>
+            <select id="pnFilterPetugas" class="pn-fselect" onchange="renderPenangananPage()">
+              <option value="">Semua Petugas</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Kanban Board -->
+        <div class="pn-board">
+          <div class="pn-col" data-status="Menunggu">
+            <div class="pn-col-head">
+              <div class="pn-col-dot waiting"></div>
+              <span>Menunggu</span>
+              <span class="pn-col-count" id="cntMenunggu">0</span>
+            </div>
+            <div class="pn-col-body" id="kanbanMenunggu"></div>
+          </div>
+          <div class="pn-col" data-status="Diproses">
+            <div class="pn-col-head">
+              <div class="pn-col-dot processing"></div>
+              <span>Diproses</span>
+              <span class="pn-col-count" id="cntDiproses">0</span>
+            </div>
+            <div class="pn-col-body" id="kanbanDiproses"></div>
+          </div>
+          <div class="pn-col" data-status="Investigasi">
+            <div class="pn-col-head">
+              <div class="pn-col-dot investigasi"></div>
+              <span>Investigasi</span>
+              <span class="pn-col-count" id="cntInvestigasi">0</span>
+            </div>
+            <div class="pn-col-body" id="kanbanInvestigasi"></div>
+          </div>
+          <div class="pn-col" data-status="Rehabilitasi">
+            <div class="pn-col-head">
+              <div class="pn-col-dot rehab"></div>
+              <span>Rehabilitasi</span>
+              <span class="pn-col-count" id="cntRehabilitasi">0</span>
+            </div>
+            <div class="pn-col-body" id="kanbanRehabilitasi"></div>
+          </div>
+          <div class="pn-col" data-status="Selesai">
+            <div class="pn-col-head">
+              <div class="pn-col-dot done"></div>
+              <span>Selesai</span>
+              <span class="pn-col-count" id="cntSelesai">0</span>
+            </div>
+            <div class="pn-col-body" id="kanbanSelesai"></div>
+          </div>
+        </div>
+
+        <!-- Overlay untuk drawer -->
+        <div class="pn-overlay" id="pnOverlay" onclick="tutupDrawer()"></div>
+
+        <!-- Side Drawer Detail -->
+        <div class="pn-drawer" id="pnDrawer">
+          <div class="pn-drawer-inner">
+            <div class="pn-drawer-head">
+              <div>
+                <div class="pn-drawer-id" id="pnDetId">#001</div>
+                <div class="pn-drawer-title" id="pnDetTitle">Nama Pelapor</div>
+              </div>
+              <button class="pn-drawer-close" onclick="tutupDrawer()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </button>
+            </div>
+            <div class="pn-drawer-badges">
+              <span class="pn-badge" id="pnDetStatus">Menunggu</span>
+              <span class="pn-prio" id="pnDetPrioritas">Sedang</span>
+            </div>
+
+            <div class="pn-drawer-scroll">
+              <div class="pn-drawer-block">
+                <div class="pn-drawer-label">Data Pelapor</div>
+                <div class="pn-drawer-info">
+                  <div class="pn-di"><span class="pn-di-key">No. HP</span><span class="pn-di-val" id="pnDetHp">-</span></div>
+                  <div class="pn-di"><span class="pn-di-key">Tanggal</span><span class="pn-di-val" id="pnDetTgl">-</span></div>
+                  <div class="pn-di"><span class="pn-di-key">Lokasi</span><span class="pn-di-val" id="pnDetLokasi">-</span></div>
+                  <div class="pn-di"><span class="pn-di-key">Jenis</span><span class="pn-di-val" id="pnDetJenis">-</span></div>
+                  <div class="pn-di"><span class="pn-di-key">Kondisi</span><span class="pn-di-val" id="pnDetKondisi">-</span></div>
+                </div>
+              </div>
+
+              <div class="pn-drawer-block" id="pnDetFotoSection" style="display:none">
+                <div class="pn-drawer-label">Foto Temuan</div>
+                <div class="pn-drawer-foto" id="pnDetFoto"></div>
+              </div>
+
+              <div class="pn-drawer-block">
+                <div class="pn-drawer-label">Deskripsi Laporan</div>
+                <div class="pn-drawer-desc" id="pnDetDeskripsi">-</div>
+              </div>
+
+              <div class="pn-drawer-block">
+                <div class="pn-drawer-label">Penanganan</div>
+                <div class="pn-drawer-actions">
+                  <div class="pn-da"><label>Status</label><select id="pnActStatus" class="pn-fselect"><option>Menunggu</option><option>Diproses</option><option>Investigasi</option><option>Rehabilitasi</option><option>Selesai</option></select></div>
+                  <div class="pn-da"><label>Prioritas</label><select id="pnActPrioritas" class="pn-fselect"><option>Rendah</option><option>Sedang</option><option>Tinggi</option><option>Darurat</option></select></div>
+                  <div class="pn-da"><label>Petugas</label><select id="pnActPetugas" class="pn-fselect"></select></div>
+                  <button class="btn-primary" onclick="simpanPenanganan()" style="margin-top:4px;width:100%;justify-content:center">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                    Simpan Perubahan
+                  </button>
+                </div>
+              </div>
+
+              <div class="pn-drawer-block">
+                <div class="pn-drawer-label">Timeline Penanganan</div>
+                <div class="pn-timeline" id="pnDetTimeline"></div>
+              </div>
+
+              <div class="pn-drawer-block">
+                <div class="pn-drawer-label">Catatan Petugas</div>
+                <div class="pn-cat-list" id="pnDetCatatan"></div>
+                <div class="pn-cat-input">
+                  <textarea id="pnCatInput" class="pn-cat-textarea" placeholder="Tambah catatan..."></textarea>
+                  <button class="btn-secondary" onclick="tambahCatatan()" style="padding:8px 14px;flex-shrink:0">Tambah</button>
+                </div>
+              </div>
+
+              <div class="pn-drawer-block">
+                <div class="pn-drawer-label">Foto Bukti</div>
+                <div class="pn-bukti" id="pnDetFotoBukti"></div>
+                <div class="pn-upload-btn" onclick="document.getElementById('pnFotoInput').click()">
+                  <input type="file" id="pnFotoInput" accept="image/*" style="display:none" onchange="uploadFotoPenanganan(event)">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                  Upload Foto
+                </div>
+              </div>
+
+              <div class="pn-drawer-block">
+                <div class="pn-drawer-label">Riwayat Aktivitas</div>
+                <div class="pn-riwayat" id="pnDetRiwayat"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ===== MODAL INFORMASI ===== -->
+  <div id="modalInfo" class="modal-overlay" style="display:none">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modalInfoTitle">Tambah Data Orangutan</h3>
+        <button onclick="closeModal('modalInfo')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="infoEditId">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nama <span class="required">*</span></label>
+            <input type="text" id="iNama" placeholder="Nama orangutan">
+          </div>
+          <div class="form-group">
+            <label>Jenis Kelamin</label>
+            <select id="iJK" class="form-select">
+              <option>Jantan</option>
+              <option>Betina</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Usia (Tahun)</label>
+            <input type="number" id="iUsia" placeholder="0" min="0">
+          </div>
+          <div class="form-group">
+            <label>Berat (kg)</label>
+            <input type="number" id="iBerat" placeholder="0" min="0">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Habitat</label>
+            <select id="iHabitat" class="form-select">
+              <option>Kalimantan</option>
+              <option>Sumatera</option>
+              <option>Tapanuli</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <select id="iStatus" class="form-select">
+              <option>Kritis (CR)</option>
+              <option>Terancam (EN)</option>
+              <option>Rentan (VU)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Lokasi</label>
+          <input type="text" id="iLokasi" placeholder="Lokasi saat ini">
+        </div>
+        <div class="form-group">
+          <label>Tanggal Masuk</label>
+          <input type="date" id="iTgl">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('modalInfo')">Batal</button>
+        <button class="btn-primary" onclick="saveInfo()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          Simpan
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL REHABILITASI ===== -->
+  <div id="modalRehab" class="modal-overlay" style="display:none">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modalRehabTitle">Tambah Rehabilitasi</h3>
+        <button onclick="closeModal('modalRehab')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="rehabEditId">
+        <div class="form-group">
+          <label>Nama Orangutan <span class="required">*</span></label>
+          <input type="text" id="rNama" placeholder="Nama">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Tanggal</label>
+            <input type="date" id="rTanggal">
+          </div>
+          <div class="form-group">
+            <label>Program</label>
+            <input type="text" id="rProgram" placeholder="Nama program">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Status</label>
+            <select id="rStatus" class="form-select">
+              <option>Aktif</option>
+              <option>Selesai</option>
+              <option>Dihentikan</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Petugas</label>
+            <input type="text" id="rPetugas" placeholder="Nama petugas">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('modalRehab')">Batal</button>
+        <button class="btn-primary" onclick="saveRehab()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          Simpan
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL USER ===== -->
+  <div id="modalUser" class="modal-overlay" style="display:none">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Tambah Pengguna</h3>
+        <button onclick="closeModal('modalUser')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Nama</label>
+          <input type="text" id="uNama" placeholder="Nama lengkap">
+        </div>
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" id="uUser" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="uPass" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label>Role</label>
+          <select id="uRole" class="form-select">
+            <option>Admin</option>
+            <option>Petugas</option>
+            <option>Viewer</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('modalUser')">Batal</button>
+        <button class="btn-primary" onclick="saveUser()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Simpan
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL DETAIL LAPORAN ===== -->
+  <div id="modalDetailLaporan" class="modal-overlay" style="display:none">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Detail Laporan</h3>
+        <button onclick="closeModal('modalDetailLaporan')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="detailLaporanContent"></div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('modalDetailLaporan')">Tutup</button>
+        <button class="btn-primary" onclick="updateStatusLaporan()">Update Status</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div id="toast" class="toast" style="display:none"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+  <script src="penanganan.js"></script>
+</body>
+</html>
