@@ -300,12 +300,7 @@ function applyRoleRestrictions() {
   // Profile dropdown: hide Settings
   const ddSettings = document.getElementById('profileDropdownSettings');
   if (ddSettings) ddSettings.style.display = isViewerRole ? 'none' : '';
-  // Dashboard hero: hide Buat Laporan button
-  const heroBtn = document.getElementById('heroBtnLaporan');
-  if (heroBtn) heroBtn.style.display = isViewerRole ? 'none' : '';
-  // Laporan page: hide form panel (read-only list only)
-  const lapForm = document.getElementById('laporanFormPanel');
-  if (lapForm) lapForm.style.display = isViewerRole ? 'none' : '';
+  // Laporan page: form panel visible for all (viewers can submit reports)
   // Informasi toolbar: hide edit/hapus/tambah
   const infoEdit = document.getElementById('btnInfoEdit');
   const infoHapus = document.getElementById('btnInfoHapus');
@@ -338,9 +333,7 @@ function applyRoleRestrictions() {
   // Hide the th wrapping the laporan checkbox
   const thCheckAllLap = document.getElementById('thCheckAllLap');
   if (thCheckAllLap) thCheckAllLap.style.display = isViewerRole ? 'none' : '';
-  // Hide laporan Detail button (requires checkbox selection)
-  const btnLapDetail = document.getElementById('btnLapDetail');
-  if (btnLapDetail) btnLapDetail.style.display = isViewerRole ? 'none' : '';
+  // Show laporan Detail button for all users
   // Rehab table: hide checkbox header
   const thCheckAllRehab = document.getElementById('thCheckAllRehab');
   if (thCheckAllRehab) thCheckAllRehab.style.display = isViewerRole ? 'none' : '';
@@ -945,7 +938,6 @@ function updateLaporanQuickStats() {
 }
 
 async function kirimLaporan() {
-  if (isViewer()) { showToast('Akses ditolak', 'error'); return; }
   const nama = document.getElementById('lNama').value.trim();
   const hp = document.getElementById('lHP').value.trim();
   const tgl = document.getElementById('lTanggal').value;
@@ -1019,7 +1011,7 @@ function renderLaporanList() {
   } else {
     empty.style.display = 'none';
     tbody.innerHTML = db.laporan.map(l => `
-      <tr>
+      <tr${viewer ? ` onclick="detailLaporanById(${l.id})" style="cursor:pointer"` : ''}>
         ${viewer ? '' : `<td><input type="checkbox" class="check-lap" value="${l.id}" onchange="trackCheck('lap','${l.id}',this.checked)"></td>`}
         <td><strong>${l.nama.split(' ')[0]}</strong></td>
         <td>${l.lokasi.split('/')[0].trim()}</td>
@@ -1032,7 +1024,6 @@ function renderLaporanList() {
 }
 
 function detailLaporanSelected() {
-  if (isViewer()) { showToast('Akses ditolak', 'error'); return; }
   if (selectedLapIds.size !== 1) { showToast('Pilih 1 laporan untuk melihat detail', 'warning'); return; }
   const id = [...selectedLapIds][0];
   const l = db.laporan.find(x => String(x.id) === id);
@@ -1187,6 +1178,7 @@ function detailLaporanById(id) {
   const l = db.laporan.find(x => x.id === id);
   if (!l) return;
   db.selectedLaporanId = l.id;
+  const viewer = isViewer();
   document.getElementById('detailLaporanContent').innerHTML = `
     <div class="detail-grid">
       <div class="detail-item"><label>Nama Pelapor</label><span>${l.nama}</span></div>
@@ -1197,15 +1189,21 @@ function detailLaporanById(id) {
       <div class="detail-item"><label>Kondisi</label><span>${l.kondisi || '-'}</span></div>
     </div>
     <div class="form-group"><label>Keterangan</label><div style="padding:10px 14px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:13px;color:var(--text)">${l.keterangan || '-'}</div></div>
-    <div class="detail-select">
+    ${viewer ? '' : `<div class="detail-select">
       <label>Update Status</label>
       <select id="updateStatusVal" class="form-select">
         <option ${l.status==='Menunggu'?'selected':''}>Menunggu</option>
         <option ${l.status==='Diproses'?'selected':''}>Diproses</option>
         <option ${l.status==='Selesai'?'selected':''}>Selesai</option>
       </select>
-    </div>
+    </div>`}
   `;
+  const footer = document.querySelector('#modalDetailLaporan .modal-footer');
+  if (footer) {
+    footer.innerHTML = viewer
+      ? '<button class="btn-secondary" onclick="closeModal(\'modalDetailLaporan\')">Tutup</button>'
+      : '<button class="btn-secondary" onclick="closeModal(\'modalDetailLaporan\')">Tutup</button><button class="btn-primary" onclick="updateStatusLaporan()">Update Status</button>';
+  }
   openModal('modalDetailLaporan');
 }
 
